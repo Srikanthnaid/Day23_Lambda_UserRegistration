@@ -16,14 +16,7 @@ public class UserMain {
 		 * calling LastName method to ensure valid Last name
 		 */
 		user.lastName();
-		/**
-		 * calling email method to ensure valid email
-		 */
-		user.email();
-		/**
-		 * calling moblieNumber method to ensure valid mobile Number
-		 */
-		user.moblieNumber();
+
 	}
 
 }
