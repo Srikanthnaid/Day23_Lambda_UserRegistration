@@ -20,7 +20,10 @@ public class UserMain {
 		 * calling email method to ensure valid email
 		 */
 		user.email();
-
+		/**
+		 * calling moblieNumber method to ensure valid mobile Number
+		 */
+		user.moblieNumber();
 	}
 
 }
