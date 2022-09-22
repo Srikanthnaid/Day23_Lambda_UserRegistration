@@ -4,7 +4,10 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-	Scanner s = new Scanner(System.in);
+	/*
+	 * Scanner class object to get value from user
+	 */
+	Scanner sc = new Scanner(System.in);
 
 	/**
 	 * Method to Enter FirstName First Name should start with capital and has
@@ -12,29 +15,13 @@ public class UserRegistration {
 	 * true value else it gives false Invalid first name
 	 */
 	public void firstName() {
-		while (true) {
-			System.out.println("Please enter your firstName:");
-			String firstName = s.next();
-			boolean result = Pattern.matches("[A-Z]{1}[a-z]{2,}", firstName);
-			if (result) {
-				System.out.println("Valid");
-
-				System.out.println("Enter last Name : ");
-				String lastName = s.next();
-				boolean result1 = Pattern.matches("[A-Z][a-z]{2,}", lastName);
-
-				System.out.println("Valid Last Name");
-
-				System.out.println(
-						"Invalid ... Please Enter Valid Last Name\n 1.lastName atleast having one Cap letter i,e: [A-Z]{1} \n"
-								+ "2.lastName having atleast 3Characters i,e:[A-Z{1}[a-z]{2,}" + "]");
-			} else {
-				System.out.println(
-						"Invalid please enter firstName bellow mention coditions  \n 1. FirstName Start with Cap[A-Z]{1} \n"
-								+ "2.firstname having minimum 3 characters");
-			}
-			return;
-		}
+		System.out.println("Enter First Name : ");
+		String firstName = sc.next();
+		boolean result = Pattern.matches("[A-Z][a-z]{2,}", firstName);
+		if (result)
+			System.out.println("Valid First Name");
+		else
+			System.out.println("Invalid ... Please Enter Valid First Name");
 	}
 
 	/**
@@ -43,19 +30,30 @@ public class UserRegistration {
 	 * else it gives false Invalid Last name
 	 */
 	public void lastName() {
-		while (true) {
-			System.out.println("Enter last Name : ");
-			String lastName = s.next();
-			boolean result = Pattern.matches("[A-Z][a-z]{2,}", lastName);
-			if (result) {
-				System.out.println("Valid Last Name");
-			} else {
-				System.out.println(
-						"Invalid ... Please Enter Valid Last Name\n 1.lastName atleast having one Cap letter i,e: [A-Z]{1} \n"
-								+ "2.lastName having atleast 3Characters i,e:[A-Z{1}[a-z]{2,}" + "]");
-			}
-			return;
-		}
+		System.out.println("Enter last Name : ");
+		String lastName = sc.next();
+		boolean result = Pattern.matches("[A-Z][a-z]{2,}", lastName);
+		if (result)
+			System.out.println("Valid Last Name");
+		else
+			System.out.println("Invalid ... Please Enter Valid Last Name");
+	}
 
+	/**
+	 * Method to Enter Email e.g. abc.xyz@bl.co.in Email address has 3 parts
+	 * mandatory and 2 parts optional if entered email matches the pattern then it
+	 * gives true value else it gives false Invalid email address
+	 */
+	public void email() {
+		System.out.println("Enter the Email : ");
+		String Email = sc.next();
+		boolean result = Pattern.matches("^[a-z0-9]+([_+-.][0-9a-z]+)*@[a-z]+.[a-z]{2,3}$", Email);
+		// boolean result =
+		// Pattern.matches("^[a-zA-Z0-9_.]*[-]*[+]*[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]+)$",
+		// Email);
+		if (result)
+			System.out.println("Valid Email");
+		else
+			System.out.println("Invalid... Please Enter Valid Email Adderss");
 	}
 }

@@ -13,9 +13,13 @@ public class UserMain {
 		 */
 		user.firstName();
 		/**
-		 * calling lasttName method to ensure valid first name
+		 * calling LastName method to ensure valid Last name
 		 */
 		user.lastName();
+		/**
+		 * calling email method to ensure valid email
+		 */
+		user.email();
 
 	}
 
