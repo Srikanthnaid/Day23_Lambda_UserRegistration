@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
+
 	/*
 	 * Scanner class object to get value from user
 	 */
@@ -75,12 +76,15 @@ public class UserRegistration {
 	/**
 	 * Method to validate Password 1. password should have minimum 8 Characters 2.
 	 * Password should have at least 1 Upper case Character 3. password should have
-	 * at least 1 numeric Number in password
+	 * at least 1 numeric Number in password 4. password should have exactly 1
+	 * special character
 	 */
 	public void password() {
 		System.out.println("Enter Password : ");
 		String Password = sc.next();
-		boolean result = Pattern.matches("^(?=.*[A-Z]).{8,}$", Password);
+		boolean result = Pattern.matches("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]*[\\@\\#\\^][a-zA-Z0-9]*$",
+				Password);
+		// "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]*[\\@\\#\\^][a-zA-Z0-9]*$"
 		if (result)
 			System.out.println("Valid Password");
 		else
