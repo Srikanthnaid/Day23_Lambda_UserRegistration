@@ -1,8 +1,8 @@
 package UserRegistrationLambda;
 
 public class UserMain {
-
 	public static void main(String[] args) {
+
 		/*
 		 * Creating object of userDetails class
 		 */
@@ -24,6 +24,9 @@ public class UserMain {
 		 * calling moblieNumber method to ensure valid mobile Number
 		 */
 		user.moblieNumber();
+		/**
+		 * calling password method to ensure valid password of minimum 8 characters
+		 */
+		user.password();
 	}
-
 }
