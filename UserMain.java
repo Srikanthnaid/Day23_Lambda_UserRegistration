@@ -33,5 +33,10 @@ public class UserMain {
 		 * have at least 1 uppercase
 		 */
 		user.password();
+		/**
+		 * method to check sample email are valid or invalid
+		 */
+		user.sampleEmails();
+
 	}
 }
