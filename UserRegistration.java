@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
+
 	/*
 	 * Scanner class object
 	 */
@@ -11,6 +12,7 @@ public class UserRegistration {
 
 	/**
 	 * Method to validate firstName passed the firstName as parameter
+	 * 
 	 * @param firstName - firstName of user to validate
 	 * @return - returns the validation of first name with matched condition
 	 * @throws CustomException - if try condition not satisfy then it throw
